@@ -1,7 +1,24 @@
+import 'package:firebase_core/firebase_core.dart';
+import 'package:my_sns_project/gen/firebase_options_dev.dart' as dev;
+import 'package:my_sns_project/gen/firebase_options_prod.dart' as prod;
 import 'package:flutter/material.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(options: getFirebaseOptions());
   runApp(const MyApp());
+}
+
+FirebaseOptions getFirebaseOptions() {
+  const flavor = String.fromEnvironment('FLAVOR');
+  switch (flavor) {
+    case 'dev':
+      return dev.DefaultFirebaseOptions.currentPlatform;
+    case 'prod':
+      return prod.DefaultFirebaseOptions.currentPlatform;
+    default:
+      throw ArgumentError('Not available flavor');
+  }
 }
 
 class MyApp extends StatelessWidget {
