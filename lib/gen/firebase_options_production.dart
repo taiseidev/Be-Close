@@ -8,7 +8,7 @@ import 'package:flutter/foundation.dart'
 ///
 /// Example:
 /// ```dart
-/// import 'firebase_options_prod.dart';
+/// import 'firebase_options_production.dart';
 /// // ...
 /// await Firebase.initializeApp(
 ///   options: DefaultFirebaseOptions.currentPlatform,
@@ -47,30 +47,30 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyBpRhUO6lj7xpShBjQHruN-V3kzRIAquZE',
-    appId: '1:752538494903:web:06584c8774f0c09f21ea32',
-    messagingSenderId: '752538494903',
-    projectId: 'be-close-f73f7',
-    authDomain: 'be-close-f73f7.firebaseapp.com',
-    storageBucket: 'be-close-f73f7.appspot.com',
-    measurementId: 'G-5J14GQFL1R',
+    apiKey: 'AIzaSyA6lE48dtr2mBXSv7jnvKUtckjAljyibwg',
+    appId: '1:710629263490:web:6efa1e46046bf364230c9b',
+    messagingSenderId: '710629263490',
+    projectId: 'be-close-dev-83a2b',
+    authDomain: 'be-close-dev-83a2b.firebaseapp.com',
+    storageBucket: 'be-close-dev-83a2b.appspot.com',
+    measurementId: 'G-Z54E4RTG3Y',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyDM6JasxgjpQ443BSklqy0JN_QNDJksrac',
-    appId: '1:752538494903:android:d733a6818fb1bf4521ea32',
-    messagingSenderId: '752538494903',
-    projectId: 'be-close-f73f7',
-    storageBucket: 'be-close-f73f7.appspot.com',
+    apiKey: 'AIzaSyCIed_aLRtViNB1KvlubNoPMyu-pWZ8UtU',
+    appId: '1:710629263490:android:4c859a7ac3a02c11230c9b',
+    messagingSenderId: '710629263490',
+    projectId: 'be-close-dev-83a2b',
+    storageBucket: 'be-close-dev-83a2b.appspot.com',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyBEkraA_wYFXrNcOy25aU3N3qt7BcHiO4c',
-    appId: '1:752538494903:ios:b6f91ce2a620eb3e21ea32',
-    messagingSenderId: '752538494903',
-    projectId: 'be-close-f73f7',
-    storageBucket: 'be-close-f73f7.appspot.com',
-    iosClientId: '752538494903-41gcgdlrn9hr1oq7ti3o46ibflltsn4t.apps.googleusercontent.com',
-    iosBundleId: 'com.example.mySnsProject',
+    apiKey: 'AIzaSyCs3gUE4TcRaJ-bLckSUgOKOO3AEuwHUxk',
+    appId: '1:710629263490:ios:5aacf1842b8be2a9230c9b',
+    messagingSenderId: '710629263490',
+    projectId: 'be-close-dev-83a2b',
+    storageBucket: 'be-close-dev-83a2b.appspot.com',
+    iosClientId: '710629263490-3n1fhh9fcok3offjkbo2pb1u6hsuosi0.apps.googleusercontent.com',
+    iosBundleId: 'com.diary.app.production',
   );
 }

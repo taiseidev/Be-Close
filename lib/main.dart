@@ -1,6 +1,7 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_core/firebase_core.dart';
-import 'package:my_sns_project/gen/firebase_options_dev.dart' as dev;
-import 'package:my_sns_project/gen/firebase_options_prod.dart' as prod;
+import 'package:my_sns_project/gen/firebase_options_staging.dart' as stg;
+import 'package:my_sns_project/gen/firebase_options_production.dart' as prod;
 import 'package:flutter/material.dart';
 
 void main() async {
@@ -12,8 +13,8 @@ void main() async {
 FirebaseOptions getFirebaseOptions() {
   const flavor = String.fromEnvironment('FLAVOR');
   switch (flavor) {
-    case 'dev':
-      return dev.DefaultFirebaseOptions.currentPlatform;
+    case 'stg':
+      return stg.DefaultFirebaseOptions.currentPlatform;
     case 'prod':
       return prod.DefaultFirebaseOptions.currentPlatform;
     default:
@@ -51,6 +52,22 @@ class _MyHomePageState extends State<MyHomePage> {
     });
   }
 
+  String nam = '';
+
+  @override
+  void initState() {
+    super.initState();
+    getName();
+  }
+
+  Future<void> getName() async {
+    final data = await FirebaseFirestore.instance.collection('user').get();
+    final name = data.docs.first.data()['name'] as String;
+    setState(() {
+      this.nam = name;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -61,8 +78,8 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            const Text(
-              'You have pushed the button this many times:',
+            Text(
+              nam,
             ),
             Text(
               '$_counter',
