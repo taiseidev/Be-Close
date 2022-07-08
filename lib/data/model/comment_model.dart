@@ -14,7 +14,7 @@ class CommentModel with _$CommentModel {
     required String content,
     required String userName,
     required String imageUrl,
-    // @Default(<String>[]) List<String> toUser,
+    required List<String> toUser,
     @TimestampDateTimeConverter() DateTime? createdAt,
     @TimestampDateTimeConverter() DateTime? updatedAt,
   }) = _CommentModel;
