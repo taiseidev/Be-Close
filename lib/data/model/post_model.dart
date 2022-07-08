@@ -13,7 +13,7 @@ class PostModel with _$PostModel {
     required String id,
     required String title,
     required String content,
-    @Default(<String>[]) List<String> imageUrls,
+    // @Default(<String>[]) List<String> imageUrls,
     @Default(0) int favoriteNum,
     @TimestampDateTimeConverter() DateTime? createdAt,
     @TimestampDateTimeConverter() DateTime? updatedAt,
