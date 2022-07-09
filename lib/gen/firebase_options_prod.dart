@@ -8,7 +8,7 @@ import 'package:flutter/foundation.dart'
 ///
 /// Example:
 /// ```dart
-/// import 'firebase_options_production.dart';
+/// import 'firebase_options_prod.dart';
 /// // ...
 /// await Firebase.initializeApp(
 ///   options: DefaultFirebaseOptions.currentPlatform,
@@ -48,17 +48,17 @@ class DefaultFirebaseOptions {
 
   static const FirebaseOptions web = FirebaseOptions(
     apiKey: 'AIzaSyA6lE48dtr2mBXSv7jnvKUtckjAljyibwg',
-    appId: '1:710629263490:web:6efa1e46046bf364230c9b',
+    appId: '1:710629263490:web:9184e1a6262f1257230c9b',
     messagingSenderId: '710629263490',
     projectId: 'be-close-dev-83a2b',
     authDomain: 'be-close-dev-83a2b.firebaseapp.com',
     storageBucket: 'be-close-dev-83a2b.appspot.com',
-    measurementId: 'G-Z54E4RTG3Y',
+    measurementId: 'G-7V2PRRDHZW',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
     apiKey: 'AIzaSyCIed_aLRtViNB1KvlubNoPMyu-pWZ8UtU',
-    appId: '1:710629263490:android:4c859a7ac3a02c11230c9b',
+    appId: '1:710629263490:android:fd3c51ef02d2d272230c9b',
     messagingSenderId: '710629263490',
     projectId: 'be-close-dev-83a2b',
     storageBucket: 'be-close-dev-83a2b.appspot.com',
@@ -66,11 +66,11 @@ class DefaultFirebaseOptions {
 
   static const FirebaseOptions ios = FirebaseOptions(
     apiKey: 'AIzaSyCs3gUE4TcRaJ-bLckSUgOKOO3AEuwHUxk',
-    appId: '1:710629263490:ios:5aacf1842b8be2a9230c9b',
+    appId: '1:710629263490:ios:71948dc7cef5d555230c9b',
     messagingSenderId: '710629263490',
     projectId: 'be-close-dev-83a2b',
     storageBucket: 'be-close-dev-83a2b.appspot.com',
-    iosClientId: '710629263490-3n1fhh9fcok3offjkbo2pb1u6hsuosi0.apps.googleusercontent.com',
-    iosBundleId: 'com.diary.app.production',
+    iosClientId: '710629263490-c9v246540ncr642gtt5u8u9k710dks22.apps.googleusercontent.com',
+    iosBundleId: 'com.sns.diary.app',
   );
 }

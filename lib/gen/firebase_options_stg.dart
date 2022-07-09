@@ -8,7 +8,7 @@ import 'package:flutter/foundation.dart'
 ///
 /// Example:
 /// ```dart
-/// import 'firebase_options_staging.dart';
+/// import 'firebase_options_stg.dart';
 /// // ...
 /// await Firebase.initializeApp(
 ///   options: DefaultFirebaseOptions.currentPlatform,
@@ -48,17 +48,17 @@ class DefaultFirebaseOptions {
 
   static const FirebaseOptions web = FirebaseOptions(
     apiKey: 'AIzaSyBpRhUO6lj7xpShBjQHruN-V3kzRIAquZE',
-    appId: '1:752538494903:web:c6d2531ee741b1fe21ea32',
+    appId: '1:752538494903:web:fb0b6a21d9e532df21ea32',
     messagingSenderId: '752538494903',
     projectId: 'be-close-f73f7',
     authDomain: 'be-close-f73f7.firebaseapp.com',
     storageBucket: 'be-close-f73f7.appspot.com',
-    measurementId: 'G-YK65E4FY99',
+    measurementId: 'G-08WKDLPLMV',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
     apiKey: 'AIzaSyDM6JasxgjpQ443BSklqy0JN_QNDJksrac',
-    appId: '1:752538494903:android:20e194e6c4a5a14c21ea32',
+    appId: '1:752538494903:android:afef7282a521800f21ea32',
     messagingSenderId: '752538494903',
     projectId: 'be-close-f73f7',
     storageBucket: 'be-close-f73f7.appspot.com',
@@ -66,11 +66,11 @@ class DefaultFirebaseOptions {
 
   static const FirebaseOptions ios = FirebaseOptions(
     apiKey: 'AIzaSyBEkraA_wYFXrNcOy25aU3N3qt7BcHiO4c',
-    appId: '1:752538494903:ios:36b672918202172221ea32',
+    appId: '1:752538494903:ios:8060eeba5b3255a321ea32',
     messagingSenderId: '752538494903',
     projectId: 'be-close-f73f7',
     storageBucket: 'be-close-f73f7.appspot.com',
-    iosClientId: '752538494903-gqj1tsue1779a7u6ql14onrjkmeurnnh.apps.googleusercontent.com',
-    iosBundleId: 'com.diary.app.staging',
+    iosClientId: '752538494903-t47j3dsgu8jbrh2ksnmrbjb27j4qdsh7.apps.googleusercontent.com',
+    iosBundleId: 'com.sns.diary.app.stg',
   );
 }
