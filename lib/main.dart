@@ -4,6 +4,7 @@ import 'package:go_router/go_router.dart';
 import 'package:my_sns_project/gen/firebase_options_stg.dart' as stg;
 import 'package:my_sns_project/gen/firebase_options_prod.dart' as prod;
 import 'package:flutter/material.dart';
+import 'package:my_sns_project/router/error_page.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -43,6 +44,7 @@ class MyApp extends StatelessWidget {
         ),
       ),
     ],
+    errorBuilder: (context, state) => ErrorPage(),
   );
 }
 
