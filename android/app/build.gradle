@@ -54,11 +54,11 @@ android {
         targetSdkVersion flutter.targetSdkVersion
         versionCode flutterVersionCode.toInteger()
         versionName flutterVersionName
-        if (dartEnvironmentVariables.FLAVOR != 'prod') {
-            applicationIdSuffix ".${dartEnvironmentVariables.FLAVOR}"
-        }
-        resValue "string", "app_name", "FlutterAT" +
-        (dartEnvironmentVariables.FLAVOR == 'prod' ? '' : ".${dartEnvironmentVariables.FLAVOR}")
+     if (dartEnvironmentVariables.FLAVOR != 'prod') {
+         applicationIdSuffix ".${dartEnvironmentVariables.FLAVOR}"
+     }
+     resValue "string", "app_name", "FlutterAT" +
+         (dartEnvironmentVariables.FLAVOR == 'prod' ? '' : ".${dartEnvironmentVariables.FLAVOR}")
     }
 
     buildTypes {
@@ -78,7 +78,7 @@ dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 }
 
-// dart-definesの設定
+// dart-define を入れる変数を宣言。
 def dartEnvironmentVariables = [:];
 if (project.hasProperty('dart-defines')) {
     // カンマ区切りかつBase64でエンコードされている dart-defines をデコードして変数に格納。
