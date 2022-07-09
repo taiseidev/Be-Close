@@ -1,5 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:go_router/go_router.dart';
 import 'package:my_sns_project/gen/firebase_options_stg.dart' as stg;
 import 'package:my_sns_project/gen/firebase_options_prod.dart' as prod;
 import 'package:flutter/material.dart';
@@ -7,7 +8,7 @@ import 'package:flutter/material.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(options: getFirebaseOptions());
-  runApp(const MyApp());
+  runApp(MyApp());
 }
 
 FirebaseOptions getFirebaseOptions() {
@@ -23,17 +24,26 @@ FirebaseOptions getFirebaseOptions() {
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+  MyApp({Key? key}) : super(key: key);
   @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
+  Widget build(BuildContext context) => MaterialApp.router(
+        title: 'Flutter Demo',
+        theme: ThemeData(
+          primarySwatch: Colors.blue,
+        ),
+        routeInformationParser: _router.routeInformationParser,
+        routerDelegate: _router.routerDelegate,
+      );
+  final _router = GoRouter(
+    routes: [
+      GoRoute(
+        path: '/',
+        builder: (context, state) => MyHomePage(
+          title: '',
+        ),
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
-    );
-  }
+    ],
+  );
 }
 
 class MyHomePage extends StatefulWidget {
