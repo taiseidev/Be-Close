@@ -1,7 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_core/firebase_core.dart';
-import 'package:my_sns_project/gen/firebase_options_staging.dart' as stg;
-import 'package:my_sns_project/gen/firebase_options_production.dart' as prod;
+import 'package:my_sns_project/gen/firebase_options_stg.dart' as stg;
+import 'package:my_sns_project/gen/firebase_options_prod.dart' as prod;
 import 'package:flutter/material.dart';
 
 void main() async {
