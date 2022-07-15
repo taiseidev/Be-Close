@@ -2,7 +2,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/foundation.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:my_sns_project/data/model/json_converters.dart';
+import 'package:my_sns_project/core/json_converters.dart';
 
 part 'follow_model.freezed.dart';
 part 'follow_model.g.dart';
