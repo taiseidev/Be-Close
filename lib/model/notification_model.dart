@@ -2,7 +2,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/foundation.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:my_sns_project/model/json_converters.dart';
+import 'package:my_sns_project/core/json_converters.dart';
 
 part 'notification_model.freezed.dart';
 part 'notification_model.g.dart';
