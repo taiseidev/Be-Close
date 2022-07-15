@@ -7,6 +7,7 @@ class App extends StatelessWidget {
   App({super.key});
   @override
   Widget build(BuildContext context) => MaterialApp.router(
+        debugShowCheckedModeBanner: false,
         title: 'Flutter Demo',
         theme: getApplicationTheme(),
         routeInformationProvider: _router.routeInformationProvider,
