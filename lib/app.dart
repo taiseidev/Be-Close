@@ -1,3 +1,4 @@
+import 'package:device_preview/device_preview.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:my_sns_project/constant/config/application_dark_theme.dart';
@@ -12,6 +13,9 @@ class App extends StatelessWidget {
         title: 'Be Close',
         theme: getApplicationTheme(),
         darkTheme: getApplicationDarkTheme(),
+        useInheritedMediaQuery: true,
+        locale: DevicePreview.locale(context),
+        builder: DevicePreview.appBuilder,
         routeInformationProvider: _router.routeInformationProvider,
         routeInformationParser: _router.routeInformationParser,
         routerDelegate: _router.routerDelegate,
