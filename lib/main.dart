@@ -1,9 +1,9 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_core/firebase_core.dart';
-import 'package:go_router/go_router.dart';
-import 'package:my_sns_project/gen/firebase_options_stg.dart' as stg;
-import 'package:my_sns_project/gen/firebase_options_prod.dart' as prod;
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+import 'package:my_sns_project/gen/firebase_options_prod.dart' as prod;
+import 'package:my_sns_project/gen/firebase_options_stg.dart' as stg;
 import 'package:my_sns_project/router/error_page.dart';
 
 void main() async {
@@ -25,7 +25,7 @@ FirebaseOptions getFirebaseOptions() {
 }
 
 class MyApp extends StatelessWidget {
-  MyApp({Key? key}) : super(key: key);
+  MyApp({super.key});
   @override
   Widget build(BuildContext context) => MaterialApp.router(
         title: 'Flutter Demo',
@@ -40,17 +40,17 @@ class MyApp extends StatelessWidget {
     routes: [
       GoRoute(
         path: '/',
-        builder: (context, state) => MyHomePage(
+        builder: (context, state) => const MyHomePage(
           title: '',
         ),
       ),
     ],
-    errorBuilder: (context, state) => ErrorPage(),
+    errorBuilder: (context, state) => const ErrorPage(),
   );
 }
 
 class MyHomePage extends StatefulWidget {
-  const MyHomePage({Key? key, required this.title}) : super(key: key);
+  const MyHomePage({super.key, required this.title});
   final String title;
   @override
   State<MyHomePage> createState() => _MyHomePageState();
@@ -77,7 +77,7 @@ class _MyHomePageState extends State<MyHomePage> {
     final data = await FirebaseFirestore.instance.collection('user').get();
     final name = data.docs.first.data()['name'] as String;
     setState(() {
-      this.nam = name;
+      nam = name;
     });
   }
 
