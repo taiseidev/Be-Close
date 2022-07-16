@@ -4,6 +4,7 @@ import 'package:go_router/go_router.dart';
 import 'package:my_sns_project/constant/config/application_dark_theme.dart';
 import 'package:my_sns_project/constant/config/application_theme.dart';
 import 'package:my_sns_project/router/error_page.dart';
+import 'package:my_sns_project/view/home/home_page.dart';
 
 class App extends StatelessWidget {
   App({super.key});
@@ -24,23 +25,9 @@ class App extends StatelessWidget {
     routes: [
       GoRoute(
         path: '/',
-        builder: (context, state) => MyHomePage(),
+        builder: (context, state) => const HomePage(),
       ),
     ],
     errorBuilder: (context, state) => const ErrorPage(),
   );
-}
-
-class MyHomePage extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
-        child: Text(
-          'テスト',
-          style: TextStyle(fontSize: 20),
-        ),
-      ),
-    );
-  }
 }
