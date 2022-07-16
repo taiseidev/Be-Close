@@ -14,10 +14,12 @@ dependencies:
   freezed_annotation:
   json_annotation:
   go_router:
+  flutter_riverpod:
 
   # firebase
   firebase_core:
   cloud_firestore:
+  badges:
 
 dev_dependencies:
   build_runner:

@@ -1,12 +1,14 @@
 import 'package:badges/badges.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:my_sns_project/presentation/pages/home/provider/providers.dart';
 import 'package:my_sns_project/presentation/ui_core/date_format.dart';
 
-class HomePageAppBar extends StatelessWidget {
+class HomePageAppBar extends ConsumerWidget {
   const HomePageAppBar({super.key});
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     return AppBar(
       backgroundColor: Colors.transparent,
       elevation: 0,
@@ -50,6 +52,16 @@ class HomePageAppBar extends StatelessWidget {
           ),
         ),
       ],
+      bottom: TabBar(
+        splashFactory: NoSplash.splashFactory,
+        physics: const NeverScrollableScrollPhysics(),
+        isScrollable: true,
+        tabs: ref.watch(tabsProvider),
+        unselectedLabelColor: Colors.grey,
+        indicatorColor: Colors.white,
+        indicatorSize: TabBarIndicatorSize.tab,
+        labelColor: Colors.white,
+      ),
     );
   }
 }
