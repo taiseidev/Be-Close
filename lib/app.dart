@@ -34,6 +34,13 @@ class App extends StatelessWidget {
 class MyHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      body: Center(
+        child: Text(
+          'テスト',
+          style: TextStyle(fontSize: 20),
+        ),
+      ),
+    );
   }
 }
