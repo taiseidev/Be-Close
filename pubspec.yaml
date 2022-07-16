@@ -15,6 +15,7 @@ dependencies:
   json_annotation:
   go_router:
   flutter_riverpod:
+  bubble_lens:
 
   # firebase
   firebase_core:
