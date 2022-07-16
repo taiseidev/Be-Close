@@ -7,7 +7,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:my_sns_project/app.dart';
+import 'package:my_sns_project/presentation/app.dart';
 
 import 'package:my_sns_project/main.dart';
 

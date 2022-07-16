@@ -1,7 +1,7 @@
 import 'package:device_preview/device_preview.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:my_sns_project/app.dart';
+import 'package:my_sns_project/presentation/app.dart';
 import 'package:my_sns_project/gen/firebase_options_prod.dart' as prod;
 import 'package:my_sns_project/gen/firebase_options_stg.dart' as stg;
 
