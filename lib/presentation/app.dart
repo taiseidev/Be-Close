@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:my_sns_project/constant/config/application_dark_theme.dart';
 import 'package:my_sns_project/constant/config/application_theme.dart';
+import 'package:my_sns_project/constant/strings.dart';
 import 'package:my_sns_project/presentation/pages/home/home_page.dart';
 import 'package:my_sns_project/router/error_page.dart';
 
@@ -11,7 +12,7 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) => MaterialApp.router(
         debugShowCheckedModeBanner: false,
-        title: 'Be Close',
+        title: appTitleString,
         theme: getApplicationTheme(),
         darkTheme: getApplicationDarkTheme(),
         useInheritedMediaQuery: true,
