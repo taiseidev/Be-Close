@@ -5,3 +5,7 @@ const appTitleString = 'Be Close';
 const tabTextOneString = 'Today';
 const tabTextTwoString = 'TimeLine';
 const tabTextThreeString = 'Favorite';
+
+// notification/provider/providers.dart
+const notificationTabTextOneString = 'All';
+const notificationTabTextTwoString = 'System';
