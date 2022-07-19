@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
+import 'package:my_sns_project/presentation/pages/notification/provider/providers.dart';
 
-class NotificationPageAppBar extends StatelessWidget {
+class NotificationPageAppBar extends ConsumerWidget {
   const NotificationPageAppBar({super.key});
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     return AppBar(
       elevation: 0,
       backgroundColor: Colors.transparent,
@@ -21,6 +23,15 @@ class NotificationPageAppBar extends StatelessWidget {
         style: TextStyle(
           fontWeight: FontWeight.bold,
         ),
+      ),
+      bottom: TabBar(
+        splashFactory: NoSplash.splashFactory,
+        isScrollable: true,
+        tabs: ref.watch(notificationTabsProvider),
+        unselectedLabelColor: Colors.grey,
+        indicatorColor: Colors.white,
+        indicatorSize: TabBarIndicatorSize.tab,
+        labelColor: Colors.white,
       ),
     );
   }
