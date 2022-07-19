@@ -10,8 +10,8 @@ class NotificationPage extends StatelessWidget {
       length: 2,
       child: Scaffold(
         backgroundColor: Colors.black,
-        appBar: PreferredSize(
-          preferredSize: const Size(30, 100),
+        appBar: const PreferredSize(
+          preferredSize: Size(30, 100),
           child: NotificationPageAppBar(),
         ),
         body: TabBarView(

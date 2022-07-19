@@ -5,13 +5,13 @@ import 'package:my_sns_project/constant/strings.dart';
 final tabsProvider = Provider(
   (_) => [
     const Tab(
-      text: tabTextOneString,
+      text: HOME_TAB_ONE_STRING,
     ),
     const Tab(
-      text: tabTextTwoString,
+      text: HOME_TAB_TWO_STRING,
     ),
     const Tab(
-      text: tabTextThreeString,
+      text: HOME_TAB_THREE_STRING,
     ),
   ],
 );

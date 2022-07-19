@@ -5,10 +5,10 @@ import 'package:my_sns_project/constant/strings.dart';
 final notificationTabsProvider = Provider(
   (_) => [
     const Tab(
-      text: notificationTabTextOneString,
+      text: NOTIFICATION_TAB_ONE_STRING,
     ),
     const Tab(
-      text: notificationTabTextTwoString,
+      text: NOTIFICATION_TAB_ONE_STRING,
     ),
   ],
 );

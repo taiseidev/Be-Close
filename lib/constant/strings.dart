@@ -1,11 +1,14 @@
 // app.dart
-const appTitleString = 'Be Close';
+const APP_TITLE_STRING = 'Be Close';
 
 // home/provider/providers.dart
-const tabTextOneString = 'Today';
-const tabTextTwoString = 'TimeLine';
-const tabTextThreeString = 'Favorite';
+const HOME_TAB_ONE_STRING = 'Today';
+const HOME_TAB_TWO_STRING = 'TimeLine';
+const HOME_TAB_THREE_STRING = 'Favorite';
+
+// notification/components/notification_page_app_bar.dart
+const NOTIFICATION_TITLE_STRING = 'Notifications';
 
 // notification/provider/providers.dart
-const notificationTabTextOneString = 'All';
-const notificationTabTextTwoString = 'System';
+const NOTIFICATION_TAB_ONE_STRING = 'All';
+const NOTIFICATION_TAB_TWO_STRING = 'System';
