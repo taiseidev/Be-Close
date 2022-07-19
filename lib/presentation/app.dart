@@ -12,7 +12,7 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) => MaterialApp.router(
         debugShowCheckedModeBanner: false,
-        title: appTitleString,
+        title: APP_TITLE_STRING,
         theme: getApplicationTheme(),
         darkTheme: getApplicationDarkTheme(),
         useInheritedMediaQuery: true,

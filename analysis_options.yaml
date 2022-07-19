@@ -5,3 +5,6 @@ analyzer:
     - "**/*.freezed.dart"
     - "**/firebase_options_prod.dart"
     - "**/firebase_options_stg.dart"
+linter:
+  rules:
+    constant_identifier_names: false
