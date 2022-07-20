@@ -130,3 +130,5 @@ app.*.symbols
 # domain object
 /lib/**/*.g.dart
 /lib/**/*.freezed.dart
+
+.env
